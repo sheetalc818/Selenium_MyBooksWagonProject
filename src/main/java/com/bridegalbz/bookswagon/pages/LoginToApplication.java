@@ -9,11 +9,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginToApplication {
+/**
+ * @author Sheetal Chaudhari
+ * @since  14/05/2020
+ * @file   LoginToApplication.java - Written logic for login feature
+ */
+
+public class LoginToApplication 
+{
 
 	public WebDriver driver;
 	
-	public LoginToApplication(WebDriver driver) {
+	public LoginToApplication(WebDriver driver) 
+	{
 		this.driver=driver;
         PageFactory.initElements(driver,this);
 	}
@@ -30,16 +38,19 @@ public class LoginToApplication {
     WebElement optionTologin;
 	
      
-    public void existingCustomers() {
+    public void existingCustomer() 
+    {
     	optionTologin.click();
     }    
 	
-	public void mail(String name) {
-		emailId.sendKeys(name);
+	public void mail(String userName) 
+	{
+		emailId.sendKeys(userName);
 	}
 	
-	public void password(String psw) {
-		pwsdNumber.sendKeys(psw);
+	public void password(String password) 
+	{
+		pwsdNumber.sendKeys(password);
 	}
 	
 	public void login() throws AWTException,InterruptedException 

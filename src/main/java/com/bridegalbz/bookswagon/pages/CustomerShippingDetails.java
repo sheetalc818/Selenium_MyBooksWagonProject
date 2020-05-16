@@ -1,12 +1,24 @@
 package com.bridegalbz.bookswagon.pages;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class CustomerShippingDetails {
+import com.bridgelabz.bookswagon.util.IAutoConstant;
+import com.bridgelabz.bookswagon.util.ReadingPropertiseFile;
+
+/**
+ * @author Sheetal Chaudhari
+ * @since  14/05/2020
+ * @file   CustomerShippingDetails.java - Written logic to add customer details
+ */
+
+public class CustomerShippingDetails implements IAutoConstant 
+{
 
 	public static WebDriver driver;
 	
@@ -15,16 +27,69 @@ public class CustomerShippingDetails {
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(id = "ctl00_cpBody_ddlNewCountry") 
-	WebElement state;
+	@FindBy(partialLinkText = "Contin") 
+	WebElement clickContinueBtn;
 	
-	@FindBy(xpath="//option[@value='113']")
+	@FindBy(id = "ctl00_cpBody_txtNewRecipientName")
+	WebElement recipientName;
+	
+	@FindBy(id = "ctl00_cpBody_txtNewAddress")
+	WebElement streetAddress;
+	
+	@FindBy(id = "ctl00_cpBody_ddlNewCountry")
 	WebElement country;
 	
-	public void addingCustomerDetails()
+	@FindBy(id = "ctl00_cpBody_ddlNewState") 
+	WebElement state;
+	
+	@FindBy(id = "ctl00_cpBody_txtNewCity")
+	WebElement cityName;
+	
+	@FindBy(id = "ctl00_cpBody_txtNewPincode")
+	WebElement cityPin;
+	
+	@FindBy(id = "ctl00_cpBody_txtNewPhone")
+	WebElement phoneNo;
+	
+	@FindBy(id = "ctl00_cpBody_imgSaveNew")
+	WebElement saveAndContinue;
+	
+	public void clickContinueBtn() 
 	{
-		state.click();
-		Select select=new Select(country);
-		select.selectByVisibleText("India");
+		clickContinueBtn.click();
+	}
+	
+	public Select selectFromDropDown(WebElement element) 
+	{
+		Select elementName = new Select(element);
+		return elementName;
+	}
+	
+	public void addingCustomerDetails() throws IOException, InterruptedException
+	{
+		recipientName.sendKeys(ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH, "recipientName"));
+		Thread.sleep(300);
+		streetAddress.sendKeys(ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH, "streetAddress"));
+		Thread.sleep(300);
+		
+		Select countryName = selectFromDropDown(country);
+		Thread.sleep(300);
+		countryName.selectByVisibleText("India");
+		
+		Select stateName = selectFromDropDown(state);
+        Thread.sleep(300);
+        stateName.selectByVisibleText("Maharashtra");
+		
+		cityName.sendKeys(ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH, "cityName"));
+		Thread.sleep(300);
+		
+		cityPin.sendKeys(ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH, "cityPin"));
+		Thread.sleep(300);
+		
+		phoneNo.sendKeys(ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH, "phoneNo"));
+		Thread.sleep(300);
+		
+		saveAndContinue.click();
+		Thread.sleep(500);
 	}
 }

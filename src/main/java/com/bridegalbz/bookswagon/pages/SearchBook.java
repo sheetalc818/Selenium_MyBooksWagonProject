@@ -6,6 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * @author Sheetal Chaudhari
+ * @since  14/05/2020
+ * @file   SearchBook.java - Written logic to Search a Book by authorName
+ */
+
 public class SearchBook 
 {
 	public static WebDriver driver;
