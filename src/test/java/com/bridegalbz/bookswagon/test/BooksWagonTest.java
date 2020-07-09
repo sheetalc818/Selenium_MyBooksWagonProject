@@ -61,12 +61,12 @@ public class BooksWagonTest extends BaseTest
 		orderBook.placingBookOrder();
 		
 		//Click continue Button and Add customer details
-		details.clickContinueBtn();
+		//details.clickContinueBtn();
 		Thread.sleep(500);
-		details.addingCustomerDetails();
+		//details.addingCustomerDetails();
 		
 		//Review order
-		order.reviewOrder();
+		//order.reviewOrder();
 	}
 
 	@AfterClass

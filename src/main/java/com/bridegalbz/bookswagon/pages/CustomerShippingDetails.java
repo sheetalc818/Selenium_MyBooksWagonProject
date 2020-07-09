@@ -27,7 +27,7 @@ public class CustomerShippingDetails implements IAutoConstant
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(partialLinkText = "Contin") 
+	@FindBy(xpath = "//a[@class='btn-red']") 
 	WebElement clickContinueBtn;
 	
 	@FindBy(id = "ctl00_cpBody_txtNewRecipientName")
@@ -51,7 +51,7 @@ public class CustomerShippingDetails implements IAutoConstant
 	@FindBy(id = "ctl00_cpBody_txtNewPhone")
 	WebElement phoneNo;
 	
-	@FindBy(id = "ctl00_cpBody_imgSaveNew")
+	@FindBy(xpath = "//input[@id='ctl00_cpBody_imgSaveNew']")
 	WebElement saveAndContinue;
 	
 	public void clickContinueBtn() 
