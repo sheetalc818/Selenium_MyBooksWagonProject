@@ -27,6 +27,9 @@ public class BaseTest implements IAutoConstant
 		options.addArguments("--disable-default-apps");
 		options.addArguments("test-type=browser");
 		options.addArguments("--no-sandbox");
+		options.addArguments("--headless");
+		options.addArguments("--disable-dev-shm-usage");
+
 		driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		String appUrl = ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH,"URL");
