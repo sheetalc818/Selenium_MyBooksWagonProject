@@ -27,7 +27,7 @@ public class CustomerShippingDetails implements IAutoConstant
 		PageFactory.initElements(driver,this);
 	}
 	
-	@FindBy(xpath = "//a[@class='btn-red']") 
+	@FindBy(className = "continue-button") 
 	WebElement clickContinueBtn;
 	
 	@FindBy(id = "ctl00_cpBody_txtNewRecipientName")

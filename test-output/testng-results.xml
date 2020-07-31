@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="109798" started-at="2020-07-09T17:11:32 IST" finished-at="2020-07-09T17:13:22 IST">
+  <suite name="Default suite" duration-ms="93977" started-at="2020-07-31T14:07:56 IST" finished-at="2020-07-31T14:09:30 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="109798" started-at="2020-07-09T17:11:32 IST" finished-at="2020-07-09T17:13:22 IST">
+    <test name="Default test" duration-ms="93977" started-at="2020-07-31T14:07:56 IST" finished-at="2020-07-31T14:09:30 IST">
       <class name="com.bridegalbz.bookswagon.test.BooksWagonTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.bridegalbz.bookswagon.test.BooksWagonTest@6ab778a]" name="setup" is-config="true" duration-ms="47012" started-at="2020-07-09T17:11:32 IST" finished-at="2020-07-09T17:12:19 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.bridegalbz.bookswagon.test.BooksWagonTest@424e1977]" name="setup" is-config="true" duration-ms="29231" started-at="2020-07-31T14:07:56 IST" finished-at="2020-07-31T14:08:26 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="whenSearchBookByAutherName_AfterPlacingAOrder_UserShouldGetTheBillingPage()[pri:0, instance:com.bridegalbz.bookswagon.test.BooksWagonTest@6ab778a]" name="whenSearchBookByAutherName_AfterPlacingAOrder_UserShouldGetTheBillingPage" duration-ms="43689" started-at="2020-07-09T17:12:19 IST" finished-at="2020-07-09T17:13:03 IST">
+        <test-method status="PASS" signature="whenSearchBookByAutherName_AfterPlacingAOrder_UserShouldGetTheBillingPage()[pri:0, instance:com.bridegalbz.bookswagon.test.BooksWagonTest@424e1977]" name="whenSearchBookByAutherName_AfterPlacingAOrder_UserShouldGetTheBillingPage" duration-ms="45145" started-at="2020-07-31T14:08:26 IST" finished-at="2020-07-31T14:09:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- whenSearchBookByAutherName_AfterPlacingAOrder_UserShouldGetTheBillingPage -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.bridegalbz.bookswagon.test.BooksWagonTest@6ab778a]" name="close" is-config="true" duration-ms="18789" started-at="2020-07-09T17:13:03 IST" finished-at="2020-07-09T17:13:22 IST">
+        <test-method status="PASS" signature="close()[pri:0, instance:com.bridegalbz.bookswagon.test.BooksWagonTest@424e1977]" name="close" is-config="true" duration-ms="19365" started-at="2020-07-31T14:09:11 IST" finished-at="2020-07-31T14:09:30 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->

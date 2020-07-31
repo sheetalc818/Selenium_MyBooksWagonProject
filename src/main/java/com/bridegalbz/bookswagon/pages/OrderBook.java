@@ -44,8 +44,8 @@ public class OrderBook
 		Thread.sleep(500);
 
 		// Increasing the quantity of book
-//		bookQuantity.sendKeys("2");
-//		Thread.sleep(100);
+		bookQuantity.sendKeys("1");
+		Thread.sleep(100);
 
 		// Clicking on place order button
 		clickPlaceOrderBtn.click();

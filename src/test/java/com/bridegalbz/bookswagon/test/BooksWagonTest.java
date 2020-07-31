@@ -10,10 +10,14 @@ import org.testng.annotations.Test;
 import com.bridegalbz.bookswagon.pages.OrderBook;
 import com.bridegalbz.bookswagon.pages.ReviewOrder;
 import com.bridegalbz.bookswagon.pages.SearchBook;
+
 import com.bridegalbz.bookswagon.pages.CustomerShippingDetails;
 import com.bridegalbz.bookswagon.pages.LoginToApplication;
 import com.bridgelabz.bookswagon.base.BaseTest;
 import com.bridgelabz.bookswagon.util.ReadingPropertiseFile;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 
 /**
  * @author Sheetal Chaudhari
@@ -22,11 +26,15 @@ import com.bridgelabz.bookswagon.util.ReadingPropertiseFile;
  */
 public class BooksWagonTest extends BaseTest 
 {
-
+	static ExtentReports report;
+	static ExtentTest test;
+	
 	@BeforeClass
 	public void setup() throws InterruptedException, IOException 
 	{
 		initialize();
+		report = new ExtentReports("/home/sheetal/eclipse-workspace/MyBooksWagon/Report/ExtentReport.html");
+		test = report.startTest("BookswagonTest");
 	}
 
 	@Test
@@ -46,6 +54,7 @@ public class BooksWagonTest extends BaseTest
 		Thread.sleep(1000);
 		customer.password(password);
 		customer.login();
+		test.log(LogStatus.PASS, "Login", "User loggedin successfully");
 		
 		//Searching for the book
 		searchBook.searchBar("Ravinder Singh");
@@ -56,22 +65,29 @@ public class BooksWagonTest extends BaseTest
 		Thread.sleep(5000);
 		searchBook.clickOnBuyNow();
 		Thread.sleep(10000);
+		test.log(LogStatus.PASS, "Searching", "User Searched book successfully");
+
 		
 		//Placing the order
 		orderBook.placingBookOrder();
+		test.log(LogStatus.PASS, "Placing Order", "User placed order successfully");
 		
 		//Click continue Button and Add customer details
-		//details.clickContinueBtn();
+		details.clickContinueBtn();
 		Thread.sleep(500);
-		//details.addingCustomerDetails();
+		details.addingCustomerDetails();
+		test.log(LogStatus.PASS, "Adding details", "User added details successfully");
 		
 		//Review order
-		//order.reviewOrder();
+		order.reviewOrder();
+		test.log(LogStatus.PASS, "Review Order ", "User order reviewd successfully");
 	}
 
 	@AfterClass
 	public void close()throws InterruptedException 
 	{
+		report.endTest(test);
+		report.flush();
 		driver.close();
 	}
 }

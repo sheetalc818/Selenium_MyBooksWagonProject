@@ -14,7 +14,7 @@ public class ReviewOrder {
 
 	public static WebDriver driver;
 	
-	@FindBy(name = "ctl00$cpBody$ShoppingCart$lvCart$savecontinue")
+	@FindBy(id = "ctl00_cpBody_imgSaveNew")
 	WebElement saveAndContinue;
 	
 	public ReviewOrder(WebDriver driver) 

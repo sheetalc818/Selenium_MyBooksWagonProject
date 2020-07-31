@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import com.bridgelabz.bookswagon.util.IAutoConstant;
 import com.bridgelabz.bookswagon.util.ReadingPropertiseFile;
@@ -33,6 +34,8 @@ public class BaseTest implements IAutoConstant
 //		options.addArguments("--disable-dev-shm-usage");
 
 		//driver=new ChromeDriver(options);
+//		FirefoxOptions options = new FirefoxOptions();
+//		options.addArguments("-headless");
 		driver= new FirefoxDriver();
 		driver.manage().window().maximize();
 		String appUrl = ReadingPropertiseFile.getProperty(PROPERTY_FILE_PATH,"URL");
