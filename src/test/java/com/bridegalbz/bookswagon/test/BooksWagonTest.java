@@ -15,6 +15,7 @@ import com.bridegalbz.bookswagon.pages.CustomerShippingDetails;
 import com.bridegalbz.bookswagon.pages.LoginToApplication;
 import com.bridgelabz.bookswagon.base.BaseTest;
 import com.bridgelabz.bookswagon.util.ReadingPropertiseFile;
+import com.bridgelabz.bookswagon.util.Screenshot;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -81,6 +82,9 @@ public class BooksWagonTest extends BaseTest
 		//Review order
 		order.reviewOrder();
 		test.log(LogStatus.PASS, "Review Order ", "User order reviewd successfully");
+
+		test.log(LogStatus.PASS,test.addScreenCapture(Screenshot.capture(driver))+ "Test Pass");
+		
 	}
 
 	@AfterClass
