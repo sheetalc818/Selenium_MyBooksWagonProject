@@ -32,12 +32,5 @@
 	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ATreport/AT Excel Report Jars/jfreechart.jar"/>
 	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ATreport/AT Excel Report Jars/commons-collections4-4.1.jar"/>
 	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ATreport/AT Excel Report Jars/ATExcelReport.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/sqlite-jdbc-3.8.11.1.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/mongodb-driver-core-3.0.4.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/mongodb-driver-3.0.4.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/jsoup-1.8.3.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/freemarker-2.3.23.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/extentreports-2.41.2.jar"/>
-	<classpathentry kind="lib" path="/home/sheetal/Desktop/Selenium/ExtentReport/bson-3.0.4.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

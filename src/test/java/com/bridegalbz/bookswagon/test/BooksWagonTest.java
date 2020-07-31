@@ -83,7 +83,7 @@ public class BooksWagonTest extends BaseTest
 		order.reviewOrder();
 		test.log(LogStatus.PASS, "Review Order ", "User order reviewd successfully");
 
-		test.log(LogStatus.PASS,test.addScreenCapture(Screenshot.capture(driver))+ "Test Pass");
+		test.log(LogStatus.PASS,test.addScreenCapture(Screenshot.capture(driver))+ "Test Failed");
 		
 	}
 
